@@ -1,0 +1,68 @@
+.header {
+    justify-content: space-between;
+    display: flex;
+    color: white;
+    height: 80px; 
+    background-color:#4B565E;
+    padding: 0 240px ;
+    align-items: center;
+    width: 1440px;
+}
+.header-left {
+display: flex;
+ align-items: center;
+}
+.header-nav {
+    display: flex;
+}
+.header-nav-item {
+    margin-right: 20px;
+}
+.header-logo {
+    margin-right: 20px;
+}
+.header-right {
+display: flex;
+margin-left: 60px;
+align-items: center;
+}
+.header-number { margin-left: 20px;}
+.header-korzinka {margin-left: 20px;}
+.header-heart {margin-left: 20px;}
+    .header2 {
+    justify-content: space-between;
+    display: flex;
+    color:black;
+    background-color: #f0ba4e ;
+    height: 48px;
+    padding: 0 240px;
+    align-items: center;
+    width: 1440px;
+    }
+.header-left2 {
+    display: flex;
+    align-items: center;
+}
+.header2-nav {
+    display: flex;
+    align-items: center;
+}
+.header2-nav-item {
+    margin: 5px;
+}
+.header-katalog { display: flex;}
+.header-right2 {
+    display: flex;
+    margin-left: 400px;
+}
+.search {
+    height: 28px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    background: url(/assets/lupa.svg) no-repeat right;
+}
+.search:focus {outline: none;}
+.map {display: flex; align-items: center; margin-left: 20px;}
+.place {display: flex; align-items: center; color: white; padding: 0 5px;}
