@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, EventEmitter, Output, output } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 // const name = 'rustam'
 // if (name === 'rustam') {
@@ -51,21 +51,34 @@ const upperCaseMenuItems = menuItems.map(
   }
 )
 
-
+// const user = {
+//   name: 'Bender' ,
+//   surname: 'White' ,
+//   height: '180' ,
+//   weight: '80' 
+// }
 
 
 
 
 @Component({
+  
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgFor],
+  imports: [RouterOutlet, NgIf, NgFor, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  template: ' <a routerLink="/switchNewPage">Админка</a>'
+
 })
 export class AppComponent {
- isShowCatalog = !!true ; 
- isShowBanner = !true ; 
+  // @Output() BannerDisabled = new EventEmitter()
+  
+  // disableBanner(){
+  //   this.BannerDisabled.emit()
+  // }
+  isShowBanner = !true; 
+ isShowCatalog = !!true ;  
   title = 'mentoring-first-project';
 
   headeritem1 = 'Главная' ;
@@ -73,7 +86,7 @@ export class AppComponent {
   readonly headeritem3 = 'Каталог' ;
   readonly header2banner = ''; 
   readonly item = '1';
-  readonly newPages = newPages ; 
+  // readonly newPages = newPages ; 
 
   menuItems = menuItems ;
   menuItem = upperCaseMenuItems;  
@@ -82,13 +95,6 @@ export class AppComponent {
     this.menuItems = upperCaseMenuItems.map(
      item => this.isUpperCase ? item.toLowerCase() : item.toUpperCase()
     )
- 
     this.isUpperCase = !this.isUpperCase
  }
- 
-
-
-
-
-
 }
